@@ -77,20 +77,20 @@ delete listForRecipee.ingredients.eggs
 
 
 const book = {
-    title: "Tienes algo en el ojo",
-    author: "Pico",
+    title: "Habitos Atomicos",
+    author: "James Clear",
     alreadyRead: false
 }
 
 const book2 = {
-    title: "Tienes algo en el ojo",
-    author: "Pico",
+    title: "El poder del Ahora",
+    author: "Eckhart",
     alreadyRead: true
 }
 
 const book3 = {
-    title: "Tien algo en el xxx",
-    author: "Pico",
+    title: "El monje que vendio su Ferrari",
+    author: "Robin Sharma",
     alreadyRead: false
 }
 
@@ -121,3 +121,23 @@ list.map((book)=>{
 
 // }
 
+/**
+ * You're at a party and you feel thirsty! However, you've got 5 friends who are also in need of a drink. Let's go get them a drink.
+ *
+ * Declare a variable that holds an empty array, called drinkTray.
+ * Create a loop that runs 5 times. On each iteration, push a drink into the drinkTray variable. The drinkTray can only hold at most two instances of the same drink type, for example it can only hold 2 colas, 2 lemonades, 2 waters.
+ * 
+ * Log to the console: "Hey guys, I brought a [INSERT VALUES FROM ARRAY]!" (For example: "Hey guys, I brought a cola, cola, lemonade, lemonade, water!")
+ */
+
+drinkTray = [];
+const drinkTypes = ['cola', 'lemonade', 'water'];
+console.log(drinkTypes);
+
+for (let i = 0; i < 6; i++ ){
+    let input = prompt("Add one of the previous drinks:");
+    drinkTray.push(input)
+    if (drinkTray  
+}
+
+console.log("Hey guys, I brought a:" drinkTray)
