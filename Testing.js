@@ -131,13 +131,17 @@ list.map((book)=>{
  */
 
 drinkTray = [];
-const drinkTypes = ['cola', 'lemonade', 'water'];
-console.log(drinkTypes);
+const drinkTypes = ['Cola', 'Lemonade', 'Water'];
+const drinkCount = { "Cola":0, "Lemonade":0, "Water":0}
 
-for (let i = 0; i < 6; i++ ){
-    let input = prompt("Add one of the previous drinks:");
-    drinkTray.push(input)
-    if (drinkTray  
+for (let i = 0; i < 5; i++ ){
+    for (let drink of drink) {
+        if (drinkCount[drink] <2){
+            drinkTray.push(drink);
+            drinkCount[drink]++;
+            break;
+        }
+    }
 }
 
-console.log("Hey guys, I brought a:" drinkTray)
+console.log("Hey guys, I brought a:" ,drinkTray)
