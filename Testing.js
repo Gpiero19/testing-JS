@@ -162,7 +162,7 @@ const trafficLight1 = {
 let rotations = 0;
 while (rotations < 2) {
   const currentState = trafficLight1.state;
-  console.log("The traffic light is on", currentState);
+  // console.log("The traffic light is on", currentState);
   if (currentState == "green"){
     trafficLight1.state = "orange";
   } else if (currentState == "orange"){
@@ -174,24 +174,24 @@ while (rotations < 2) {
 }
 
 
-const trafficLight = {
-  possibleStates: ["green", "orange", "red"],
-  stateIndex: 0,
-};
+// const trafficLight = {
+//   possibleStates: ["green", "orange", "red"],
+//   stateIndex: 0,
+// // };
 
-let cycle = 0;
-while (cycle < 2) {
-  const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
-  console.log("The traffic light is on", currentState);
-  if (currentState == "green"){
-  trafficLight.stateIndex += 1;
-  } else if (currentState == "orange"){
-  trafficLight.stateIndex += 1;
-  } else if (currentState == "red"){
-  trafficLight.stateIndex = 0;
-    cycle += 1;
-  }
-}
+// let cycle = 0;
+// while (cycle < 2) {
+//   const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
+//   // console.log("The traffic light is on", currentState);
+//   if (currentState == "green"){
+//   trafficLight.stateIndex += 1;
+//   } else if (currentState == "orange"){
+//   trafficLight.stateIndex += 1;
+//   } else if (currentState == "red"){
+//   trafficLight.stateIndex = 0;
+//     cycle += 1;
+//   }
+// }
 
 
 
@@ -206,7 +206,9 @@ function getCurrentState(trafficLight) {
   // TODO
   // Should return the current state (i.e. colour) of the `trafficLight`
   // object passed as a parameter.
-  return trafficLight.state
+  const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
+  // console.log(currentState);
+  return currentState;
 }
 
 function getNextStateIndex(trafficLight) {
@@ -215,7 +217,15 @@ function getNextStateIndex(trafficLight) {
   // - if the color is green, it will turn to orange
   // - if the color is orange, it will turn to red
   // - if the color is red, it will turn to green
-  
+  const stateIndex = trafficLight.stateIndex;
+  const states = trafficLight.possibleStates;
+
+  let nextIndex = stateIndex + 1;
+
+  if (nextIndex >= states.length){
+    nextIndex = 0
+  }
+  return nextIndex
 }
 
 // This function loops for the number of seconds specified by the `secs`
