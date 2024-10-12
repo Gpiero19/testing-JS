@@ -99,7 +99,7 @@ const list = [
     book2,
     book3
 ]
-console.log(list.length, "ñenm")
+console.log(list.length)
 
 list.map((book)=>{
     console.log(book.title + ' by ' + book.author)
@@ -134,15 +134,15 @@ drinkTray = [];
 const drinkTypes = ['Cola', 'Lemonade', 'Water'];
 const drinkCount = { "Cola":0, "Lemonade":0, "Water":0}
 
-for (let i = 0; i < 5; i++ ){
-    for (let drink of drink) {
-        if (drinkCount[drink] <2){
-            drinkTray.push(drink);
-            drinkCount[drink]++;
-            break;
-        }
-    }
-}
+// for (let i = 0; i < 5; i++ ){
+//     for (let drink of drix nk) {
+//         if (drinkCount[drink] <2){
+//             drinkTray.push(drink);
+//             drinkCount[drink]++;
+//             break;
+//         }
+//     }
+// }
 
 console.log("Hey guys, I brought a:" ,drinkTray)   
 
@@ -155,31 +155,25 @@ console.log("Hey guys, I brought a:" ,drinkTray)
  * The `state` property says what the traffic light's state (i.e. colour) is at
  * that moment.
  */
-const trafficLight = {
+const trafficLight1 = {
   state: "green",
 };
 
 let rotations = 0;
 while (rotations < 2) {
-  const currentState = trafficLight.state;
+  const currentState = trafficLight1.state;
   console.log("The traffic light is on", currentState);
   if (currentState == "green"){
-    currentState = "orange";
-    console.log("The traffic light is on ", currentState);
+    trafficLight1.state = "orange";
   } else if (currentState == "orange"){
-    currentState = "red"
-    console.log("The traffic light is on ", currentState);
-  } else if (currentState == "red"){
-    currentState = "green";
+    trafficLight1.state = "red"
+  } else if ( currentState== "red"){
+    trafficLight1.state = "green";
     rotations += 1;
   }
 }
 
-/**
- * The `possibleStates` property define the states (in this case: colours)
- * in which the traffic light can be.
- * The `stateIndex` property indicates which of the possible states is current.
- */
+
 const trafficLight = {
   possibleStates: ["green", "orange", "red"],
   stateIndex: 0,
@@ -189,24 +183,17 @@ let cycle = 0;
 while (cycle < 2) {
   const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
   console.log("The traffic light is on", currentState);
-
-  // TODO
-  // if the color is green, turn it orange
-  // if the color is orange, turn it red
-  // if the color is red, add 1 to cycles and turn it green
+  if (currentState == "green"){
+  trafficLight.stateIndex += 1;
+  } else if (currentState == "orange"){
+  trafficLight.stateIndex += 1;
+  } else if (currentState == "red"){
+  trafficLight.stateIndex = 0;
+    cycle += 1;
+  }
 }
 
-/**
- * The output should be:
 
-The traffic light is on green
-The traffic light is on orange
-The traffic light is on red
-The traffic light is on green
-The traffic light is on orange
-The traffic light is on red
-
-*/
 
 // "use strict";
 /**
@@ -219,6 +206,7 @@ function getCurrentState(trafficLight) {
   // TODO
   // Should return the current state (i.e. colour) of the `trafficLight`
   // object passed as a parameter.
+  return trafficLight.state
 }
 
 function getNextStateIndex(trafficLight) {
@@ -227,6 +215,7 @@ function getNextStateIndex(trafficLight) {
   // - if the color is green, it will turn to orange
   // - if the color is orange, it will turn to red
   // - if the color is red, it will turn to green
+  
 }
 
 // This function loops for the number of seconds specified by the `secs`
