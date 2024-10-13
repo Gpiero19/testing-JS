@@ -290,6 +290,8 @@ function runExperiment(sampleSize) {
   //    for keeping a count how many times the value 1 is thrown, the second
   //    element for value 2, etc.
 
+
+
   const results = [];
 
   // TODO
