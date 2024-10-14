@@ -280,6 +280,16 @@ console.log("--------------------------------")
 function runExperiment(sampleSize) {
   const valueCounts = [0, 0, 0, 0, 0, 0];
 
+  function getRandomIntInclusive(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+  }
+  for (var i; i < sampleSize; i++){
+    let valueCount = (getRandomIntInclusive(1, 7))
+    valueCounts.push(valueCount)
+    console.log(valueCounts)
+  }
   // TODO
   // Write a for loop that iterates `sampleSize` times (sampleSize is a number).
   // In each loop iteration:
@@ -322,4 +332,6 @@ function main() {
   // [ '16.71', '16.68', '16.69', '16.66', '16.67', '16.59' ] 1000000
 }
 
+const sampleSizes = [100, 1000, 1000000];
 main();
+runExperiment(sampleSizes)
