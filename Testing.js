@@ -280,13 +280,13 @@ console.log("--------------------------------")
 function runExperiment(sampleSize) {
   const valueCounts = [0, 0, 0, 0, 0, 0];
 
-  function getRandomIntInclusive(min, max) {
+  function getRandomIntInclusive(min=1, max=6) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
   }
   for (var i; i < sampleSize; i++){
-    let valueCount = (getRandomIntInclusive(1, 7))
+    let valueCount = (getRandomIntInclusive())
     valueCounts.push(valueCount)
     console.log(valueCounts)
   }
