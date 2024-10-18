@@ -276,6 +276,12 @@ console.log("--------------------------------")
 // Week 2  - Experiments
 
 "use strict";
+let values1 = [];
+for (let u = 1; u <= 6; u++){
+let randomNumber = Math.floor(Math.random() * 6) + 1;
+values1.push(randomNumber);
+}
+console.log(values1)
 
 function runExperiment(sampleSize) {
   const valueCounts = [0, 0, 0, 0, 0, 0];
@@ -285,7 +291,7 @@ function runExperiment(sampleSize) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
   }
-  for (var i; i < sampleSize; i++){
+  for (var i = 1; i <= sampleSize; i++){
     let valueCount = (getRandomIntInclusive())
     valueCounts.push(valueCount)
     console.log(valueCounts)
@@ -313,6 +319,9 @@ function runExperiment(sampleSize) {
   // 2. Convert the computed percentage to a number string with a precision of
   //    two decimals, e.g. '14.60'.
   // 3. Then push that string onto the `results` array.
+
+
+  
 
   return results;
 }
