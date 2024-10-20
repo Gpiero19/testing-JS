@@ -305,7 +305,7 @@ function runExperiment(sampleSize) {
   //    value from the previous step. Use the first element of `valueCounts`
   //    for keeping a count how many times the value 1 is thrown, the second
   //    element for value 2, etc.
-console.log("commit")
+
 
 
   const results = [];
