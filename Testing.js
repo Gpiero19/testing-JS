@@ -286,6 +286,7 @@ console.log(values1)
 function runExperiment(sampleSize) {
   const valueCounts = [0, 0, 0, 0, 0, 0];
 
+  // NEEDS TO BE FIXED
   function getRandomIntInclusive(min=1, max=6) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
