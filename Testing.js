@@ -362,15 +362,16 @@ let sum = 0
 const total = 2020
 // Write your code here
 for (let i = 0; i < list1.length; i++)  {
-  for (let j = 0; j < list1[i].length; j++)  {
-    const suma = i+j 
-    console.log(i, j , suma)
+  for (let j = 0; j < list1.length; j++)  {
+    for (let x = 0; x <list1.length; x++)  {
+      const suma = list1[i] + list1[j] + list1[x]
+    // console.log(i, j , suma)
     if ( suma === total)  {
-     result = i * j 
-     console.log(result)
+     result = list1[i] * list1[j] * list1[x]
+    //  console.log(result)
     }
   }
-}
+}}
 
 // list1.map((firstValue)=>{
 //   list1.map((secondValue)=>{
@@ -382,4 +383,6 @@ for (let i = 0; i < list1.length; i++)  {
 // })
 
 // TEST CODE, do not change
-console.assert(result === 514579, `The result is not correct, it is ${result}, but should be 514579`);
+// console.assert(result === 514579, `The result is not correct, it is ${result}, but should be 514579`);
+
+console.assert(result === 241861950, `The result is not correct, it is ${result}, but should be 241861950`);
