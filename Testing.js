@@ -407,42 +407,39 @@ console.assert(result === 241861950, `The result is not correct, it is ${result}
 
 const passwordList = [
   { times: '1-3', letter: 'a', password: 'abcde'},
-  { times: '1-3', letter: 'b', password: 'cdefg'},
+  { times: '1-4', letter: 'b', password: 'cdefg'},
   { times: '2-9', letter: 'c', password: 'ccccccccc'}
 ];
 
+
 const parseTimesToNumber = (time = "")=> {
 
-   const min = Number(time.split("-")[0])
+  const min = Number(time.split("-")[0])
   const max =  Number(time.split("-")[1] )
-
     return {
       min,
       max
     }
 }
 
+for (i = 0; i < passwordList.length; i++)  {
 
+  const {min, max} = parseTimesToNumber(passwordList[i].times)
+  const letter = passwordList[i].letter
+  const password =  passwordList[i].password
+  // console.log(i)
+  let count = 0  
+  const listnumber = password.split("")
 
-const number = parseTimesToNumber(passwordList[0].times)
-const letter = passwordList[0].letter
-const password =  passwordList[0].password
+  listnumber.map((char)=>{
+    if (char === letter){
+      count + 1
+    }
+  })
 
-let count = 0 
-const listnumber = password.split("")
-
-
-listnumber.map((char)=>{
-  if(char === letter){
-    count + 1
+  if(count <= max || count >= min){
+    console.log("Valid", min, max)
   }
-})
 
-if(count <= number.max || count >= number.min){
-
-  console.log("YEEES")
+  console.log(listnumber)
 }
-
-console.log(listnumber)
-// for (i = 0; passwordList[i])
-// Object.keys(password.)
