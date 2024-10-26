@@ -411,6 +411,8 @@ const passwordList = [
   { times: '2-9', letter: 'c', password: 'ccccccccc'}
 ];
 
+// let experiment = passwordList.map(letter =>)
+// console.log(experiment)
 
 const parseTimesToNumber = (time = "")=> {
 
@@ -428,18 +430,18 @@ for (i = 0; i < passwordList.length; i++)  {
   const letter = passwordList[i].letter
   const password =  passwordList[i].password
   // console.log(i)
-  let count = 0  
+  let count = 0 
   const listnumber = password.split("")
 
   listnumber.map((char)=>{
     if (char === letter){
-      count + 1
+      count += 1
     }
   })
 
-  if(count <= max || count >= min){
-    console.log("Valid", min, max)
+  if(count <= max && count >= min){
+     console.log(`Valid, ${letter} is in ${password} ${count} time`)
+  } else {
+    console.log(`Invalid, ${letter} is not between ${min} or ${max} times in ${password}`)
   }
-
-  console.log(listnumber)
 }
