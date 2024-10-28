@@ -482,11 +482,16 @@ const addTransaction = (prevAmount, newAmount, reason) => {
 
 const donateMoney = (amount, onSuccess, onFail) => {
   // TODO complete this function
-  if (amount > 0 || amount <= currentBalance)  {
-    let prevAmount = currentBalance;
-    let newAmount = currentBalance - amount;
+  let lastBalance = bankAccount.transactions[0].prevAmount
+
+  // console.log(lastBalance)
+
+  if (amount > 0 && amount <= bankAccount.currentBalance)  {
+    let prevAmount = amount;
+    let newAmount = bankAccount.currentBalance - amount;
+    bankAccount.currentBalance -= amount
     addTransaction(prevAmount, newAmount, "Donation")
-    currentBalance -= amount
+    console.log(bankAccount.transactions)
       return onSuccess
     } else {
       return onFail
