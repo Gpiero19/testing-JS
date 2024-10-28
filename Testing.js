@@ -480,11 +480,18 @@ const addTransaction = (prevAmount, newAmount, reason) => {
   bankAccount.transactions.push(newTransaction);
 };
 
-const enoughBalance = (amount, onSuccess, onFail) =>  {
+
+
+const donateMoney = (amount, onSuccess, onFail) => {
+  // TODO complete this function
+  // let lastBalance = bankAccount.transactions[0].prevAmount
+  
   if (amount > 0 && amount <= bankAccount.currentBalance)  {
     let prevAmount = amount;
     let newAmount = bankAccount.currentBalance - amount;
     bankAccount.currentBalance -= amount
+    
+    addTransaction(prevAmount, newAmount, "Donation")
 
       // console.log(bankAccount.transactions)
       return onSuccess()
@@ -492,22 +499,23 @@ const enoughBalance = (amount, onSuccess, onFail) =>  {
       return onFail()
     }
   }
-
-const donateMoney = (amount, onSuccess, onFail) => {
-  // TODO complete this function
-  let lastBalance = bankAccount.transactions[0].prevAmount
-
-  enoughBalance(amount, onSuccess, onFail)
   // console.log(lastBalance)
-  addTransaction(prevAmount, newAmount, "Donation")
 
-};
 const payRent = (amount, onSuccess, onFail) => {
   // TODO complete this function
-  enoughBalance(amount, onSuccess, onFail)
-  addTransaction(prevAmount, newAmount, "Rent")
+  if (amount > 0 && amount <= bankAccount.currentBalance)  {
+    let prevAmount = amount;
+    let newAmount = bankAccount.currentBalance - amount;
+    bankAccount.currentBalance -= amount
+    
+    addTransaction(prevAmount, newAmount, "Rent")
 
-};
+      // console.log(bankAccount.transactions)
+      return onSuccess()
+    } else {
+      return onFail()
+    }
+  }
 
 /**
  * TEST CODE. DO NOT EDIT
