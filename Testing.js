@@ -490,11 +490,12 @@ const donateMoney = (amount, onSuccess, onFail) => {
     let prevAmount = amount;
     let newAmount = bankAccount.currentBalance - amount;
     bankAccount.currentBalance -= amount
+
     addTransaction(prevAmount, newAmount, "Donation")
-    console.log(bankAccount.transactions)
-      return onSuccess
+    // console.log(bankAccount.transactions)
+      return onSuccess()
     } else {
-      return onFail
+      return onFail()
     }
 };
 const payRent = (amount, onSuccess, onFail) => {
