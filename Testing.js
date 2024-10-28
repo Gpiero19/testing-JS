@@ -475,8 +475,22 @@ const bankAccount = {
   ],
 };
 
+const addTransaction = (prevAmount, newAmount, reason) => {
+  const newTransaction = { prevAmount, newAmount, reason };
+  bankAccount.transactions.push(newTransaction);
+};
+
 const donateMoney = (amount, onSuccess, onFail) => {
   // TODO complete this function
+  if (amount > 0 || amount <= currentBalance)  {
+    let prevAmount = currentBalance;
+    let newAmount = currentBalance - amount;
+    addTransaction(prevAmount, newAmount, "Donation")
+    currentBalance -= amount
+      return onSuccess
+    } else {
+      return onFail
+    }
 };
 const payRent = (amount, onSuccess, onFail) => {
   // TODO complete this function
