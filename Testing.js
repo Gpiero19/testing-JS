@@ -24,12 +24,12 @@ myString = myString.replace(/,/g, " ");
 let i = 0
 
 while (i < 21) {
-    if (i % 2 === 0) {
-        // console.log(`The number ${i} is even!`)
-    } else {
-        // console.log(`The number ${i} is odd!`);
-    }
-    i++;
+  if (i % 2 === 0) {
+    // console.log(`The number ${i} is even!`)
+  } else {
+    // console.log(`The number ${i} is odd!`);
+  }
+  i++;
 }
 
 /**
@@ -50,13 +50,13 @@ while (i < 21) {
 
 
 const listForRecipee = {
-    title: "Omelette",
-    serves: 2,
-    ingredients: {
-        eggs: 4,
-        stripsOfBacon: 2,
-        saltPepper: 1
-    }
+  title: "Omelette",
+  serves: 2,
+  ingredients: {
+    eggs: 4,
+    stripsOfBacon: 2,
+    saltPepper: 1
+  }
 };
 
 listForRecipee.ingredients.water = "1 ml"
@@ -77,36 +77,36 @@ delete listForRecipee.ingredients.eggs
 
 
 const book = {
-    title: "Habitos Atomicos",
-    author: "James Clear",
-    alreadyRead: false
+  title: "Habitos Atomicos",
+  author: "James Clear",
+  alreadyRead: false
 }
 
 const book2 = {
-    title: "El poder del Ahora",
-    author: "Eckhart",
-    alreadyRead: true
+  title: "El poder del Ahora",
+  author: "Eckhart",
+  alreadyRead: true
 }
 
 const book3 = {
-    title: "El monje que vendio su Ferrari",
-    author: "Robin Sharma",
-    alreadyRead: false
+  title: "El monje que vendio su Ferrari",
+  author: "Robin Sharma",
+  alreadyRead: false
 }
 
 const list = [
-    book,
-    book2,
-    book3
+  book,
+  book2,
+  book3
 ]
 console.log(list.length)
 
-list.map((book)=>{
-    console.log(book.title + ' by ' + book.author)
-    if (book.alreadyRead) {
-     return  console.log('You already read ' + book.title);
-    }
-   return console.log('You still need to read ' + book.title)
+list.map((book) => {
+  console.log(book.title + ' by ' + book.author)
+  if (book.alreadyRead) {
+    return console.log('You already read ' + book.title);
+  }
+  return console.log('You still need to read ' + book.title)
 })
 
 // for (let i = 0; i < list.length ; i++) {
@@ -132,7 +132,7 @@ list.map((book)=>{
 
 drinkTray = [];
 const drinkTypes = ['Cola', 'Lemonade', 'Water'];
-const drinkCount = { "Cola":0, "Lemonade":0, "Water":0}
+const drinkCount = { "Cola": 0, "Lemonade": 0, "Water": 0 }
 
 // for (let i = 0; i < 5; i++ ){
 //     for (let drink of drix nk) {
@@ -144,7 +144,7 @@ const drinkCount = { "Cola":0, "Lemonade":0, "Water":0}
 //     }
 // }
 
-console.log("Hey guys, I brought a:" ,drinkTray)   
+console.log("Hey guys, I brought a:", drinkTray)
 
 /** Week 2 - Taffic Light */
 
@@ -161,16 +161,26 @@ const trafficLight1 = {
 
 let rotations = 0;
 while (rotations < 2) {
-  const currentState = trafficLight1.state;
+  const {state} = trafficLight1;
   // console.log("The traffic light is on", currentState);
-  if (currentState == "green"){
+switch (state) {
+  case "green":
     trafficLight1.state = "orange";
-  } else if (currentState == "orange"){
-    trafficLight1.state = "red"
-  } else if ( currentState== "red"){
+    break;
+  
+  case "orange":
+    trafficLight1.state = "red";
+    break;
+  
+  case "red":
     trafficLight1.state = "green";
     rotations += 1;
-  }
+    break;
+
+  default:
+    break;
+}
+
 }
 
 
@@ -224,7 +234,7 @@ function getNextStateIndex(trafficLight) {
 
   let nextIndex = stateIndex + 1;
 
-  if (nextIndex >= states.length){
+  if (nextIndex >= states.length) {
     nextIndex = 0
   }
   return nextIndex
@@ -277,9 +287,9 @@ console.log("--------------------------------")
 
 "use strict";
 let values1 = [];
-for (let u = 1; u <= 6; u++){
-let randomNumber = Math.floor(Math.random() * 6) + 1;
-values1.push(randomNumber);
+for (let u = 1; u <= 6; u++) {
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
+  values1.push(randomNumber);
 }
 console.log(values1)
 
@@ -287,12 +297,12 @@ function runExperiment(sampleSize) {
   const valueCounts = [0, 0, 0, 0, 0, 0];
 
   // NEEDS TO BE FIXE
-  function getRandomIntInclusive(min=1, max=6) {
+  function getRandomIntInclusive(min = 1, max = 6) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
   }
-  for (var i = 1; i <= sampleSize; i++){
+  for (var i = 1; i <= sampleSize; i++) {
     let valueCount = (getRandomIntInclusive())
     valueCounts.push(valueCount)
     console.log(valueCounts)
@@ -322,7 +332,7 @@ function runExperiment(sampleSize) {
   // 3. Then push that string onto the `results` array.
 
 
-  
+
 
   return results;
 }
@@ -361,17 +371,18 @@ let sum = 0
 
 const total = 2020
 // Write your code here
-for (let i = 0; i < list1.length; i++)  {
-  for (let j = 0; j < list1.length; j++)  {
-    for (let x = 0; x <list1.length; x++)  {
+for (let i = 0; i < list1.length; i++) {
+  for (let j = 0; j < list1.length; j++) {
+    for (let x = 0; x < list1.length; x++) {
       const suma = list1[i] + list1[j] + list1[x]
-    // console.log(i, j , suma)
-    if ( suma === total)  {
-     result = list1[i] * list1[j] * list1[x]
-    //  console.log(result)
+      // console.log(i, j , suma)
+      if (suma === total) {
+        result = list1[i] * list1[j] * list1[x]
+        //  console.log(result)
+      }
     }
   }
-}}
+}
 
 // list1.map((firstValue)=>{
 //   list1.map((secondValue)=>{
@@ -406,41 +417,41 @@ console.assert(result === 241861950, `The result is not correct, it is ${result}
  */
 
 const passwordList = [
-  { times: '1-3', letter: 'a', password: 'abcde'},
-  { times: '1-4', letter: 'b', password: 'cdefg'},
-  { times: '2-9', letter: 'c', password: 'ccccccccc'}
+  { times: '1-3', letter: 'a', password: 'abcde' },
+  { times: '1-4', letter: 'b', password: 'cdefg' },
+  { times: '2-9', letter: 'c', password: 'ccccccccc' }
 ];
 
 // let experiment = passwordList.map(letter =>)
 // console.log(experiment)
 
-const parseTimesToNumber = (time = "")=> {
+const parseTimesToNumber = (time = "") => {
 
   const min = Number(time.split("-")[0])
-  const max =  Number(time.split("-")[1] )
-    return {
-      min,
-      max
-    }
+  const max = Number(time.split("-")[1])
+  return {
+    min,
+    max
+  }
 }
 
-for (i = 0; i < passwordList.length; i++)  {
+for (i = 0; i < passwordList.length; i++) {
 
-  const {min, max} = parseTimesToNumber(passwordList[i].times)
+  const { min, max } = parseTimesToNumber(passwordList[i].times)
   const letter = passwordList[i].letter
-  const password =  passwordList[i].password
+  const password = passwordList[i].password
   // console.log(i)
-  let count = 0 
+  let count = 0
   const listnumber = password.split("")
 
-  listnumber.map((char)=>{
-    if (char === letter){
+  listnumber.map((char) => {
+    if (char === letter) {
       count += 1
     }
   })
 
-  if(count <= max && count >= min){
-     console.log(`Valid, ${letter} is in ${password} ${count} time`)
+  if (count <= max && count >= min) {
+    console.log(`Valid, ${letter} is in ${password} ${count} time`)
   } else {
     console.log(`Invalid, ${letter} is not between ${min} or ${max} times in ${password}`)
   }
@@ -485,37 +496,39 @@ const addTransaction = (prevAmount, newAmount, reason) => {
 const donateMoney = (amount, onSuccess, onFail) => {
   // TODO complete this function
   // let lastBalance = bankAccount.transactions[0].prevAmount
-  
-  if (amount > 0 && amount <= bankAccount.currentBalance)  {
-    let prevAmount = amount;
-    let newAmount = bankAccount.currentBalance - amount;
-    bankAccount.currentBalance -= amount
-    
-    addTransaction(prevAmount, newAmount, "Donation")
 
-      // console.log(bankAccount.transactions)
-      return onSuccess()
-    } else {
-      return onFail()
-    }
+  const condition = amount > 0 && amount <= bankAccount.currentBalance
+
+  if (!condition) {
+    return onFail()
   }
-  // console.log(lastBalance)
+  let prevAmount = amount;
+  let newAmount = bankAccount.currentBalance - amount;
+  bankAccount.currentBalance -= amount
+
+  addTransaction(prevAmount, newAmount, "Donation")
+
+  return onSuccess()
+}
+
+donateMoney()
+// console.log(lastBalance)
 
 const payRent = (amount, onSuccess, onFail) => {
   // TODO complete this function
-  if (amount > 0 && amount <= bankAccount.currentBalance)  {
+  if (amount > 0 && amount <= bankAccount.currentBalance) {
     let prevAmount = amount;
     let newAmount = bankAccount.currentBalance - amount;
     bankAccount.currentBalance -= amount
-    
+
     addTransaction(prevAmount, newAmount, "Rent")
 
-      // console.log(bankAccount.transactions)
-      return onSuccess()
-    } else {
-      return onFail()
-    }
+    // console.log(bankAccount.transactions)
+    return onSuccess()
+  } else {
+    return onFail()
   }
+}
 
 /**
  * TEST CODE. DO NOT EDIT
@@ -536,6 +549,7 @@ const onFailDutch = () => {
 };
 
 donateMoney(100, onSuccessEnglish, onFailEnglish);
+
 console.log(bankAccount);
 
 payRent(100, onSuccessEnglish, onFailEnglish);
@@ -574,9 +588,3 @@ transactions: [
 }
 * 
 */
-const eurosFormatter = new Intl.NumberFormat('nl-NL', {
-  style: 'currency',
-  currency: 'EUR',
-});
-
-export default eurosFormatter;
