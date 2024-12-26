@@ -25,6 +25,16 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
+
+}.calcu2 {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(136, 24, 4, 0.76);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .item {
