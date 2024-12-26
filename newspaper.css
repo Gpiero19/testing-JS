@@ -19,6 +19,16 @@ body {
 .test {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: end;
+    width: 50%;
+}
+.h3{
+    gap: 15px;
+}
+
+#section{
+    padding: 10%;
 }
 
 .calcu {
@@ -49,4 +59,13 @@ body {
     border-radius: 5px;
     border-color: 30px black;
     color: white;
+}
+
+.text {
+    display: flex;
+    align-content: flex-end;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    padding-left: 5px;
 }
