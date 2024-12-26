@@ -16,13 +16,23 @@ body {
     width: auto;
 }
 
-.test {
+.text {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.cubes {
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
     align-items: end;
     width: 50%;
 }
+
 .h3{
     gap: 15px;
 }
@@ -57,15 +67,7 @@ body {
     background-color: rgba(217, 152, 140, 0.76);
     text-align: center;
     border-radius: 5px;
-    border-color: 30px black;
+    border-color: 30px solid black;
     color: white;
 }
 
-.text {
-    display: flex;
-    align-content: flex-end;
-    width: 50%;
-    height: auto;
-    justify-content: center;
-    padding-left: 5px;
-}
