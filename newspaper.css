@@ -1,0 +1,39 @@
+body {
+    background-color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: chocolate;
+}
+
+.titulo {
+    background-color: aliceblue;
+    color: black;
+}
+#navi {
+    background-color: cyan;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+}
+
+.calcu {
+    display: grid;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(136, 24, 4, 0.76);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    background-color: rgba(217, 152, 140, 0.76);
+    text-align: center;
+    border-radius: 5px;
+    border-color: black;
+    color: white;
+}
