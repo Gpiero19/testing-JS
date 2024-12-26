@@ -16,6 +16,11 @@ body {
     width: auto;
 }
 
+.test {
+    display: flex;
+    justify-content: space-around;
+}
+
 .calcu {
     display: grid;
     width: 150px;
@@ -33,17 +38,15 @@ body {
     width: 150px;
     height: 150px;
     background-color: rgba(136, 24, 4, 0.76);
-    justify-items: center;
     align-items: center;
 }
 
 .item {
     width: 50px;
     height: 50px;
-    justify-content: center;
     background-color: rgba(217, 152, 140, 0.76);
     text-align: center;
     border-radius: 5px;
-    border-color: black;
+    border-color: 30px black;
     color: white;
 }
