@@ -2,27 +2,37 @@ body {
     background-color: aquamarine;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: chocolate;
+    margin: 0;
+    padding: 0;
 }
 
 .titulo {
     background-color: aliceblue;
     color: black;
 }
+
 #navi {
     background-color: cyan;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: auto;
+    width: 100%;
 }
+
+/* .text, .cubes {
+    display: flex;
+    flex: 1; 
+    padding: 10px;
+}  */
 
 .text {
     display: flex;
     align-content: flex-end;
-    width: 50%;
+    width: 40%;
     height: auto;
     justify-content: center;
-    padding-left: 5px;
+    box-sizing: border-box;
+    padding-left: 0px;
 }
 
 .cubes {
@@ -30,7 +40,8 @@ body {
     /* justify-content: space-around; */
     /* flex-wrap: wrap; */
     align-items: end;
-    width: 50%;
+    box-sizing: border-box;
+    width: 40%;
 }
 
 .h3{
