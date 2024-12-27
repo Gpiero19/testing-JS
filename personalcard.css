@@ -3,9 +3,9 @@
     box-sizing: border-box;
 }
 
-html {
+/* html {
     font-size: 62,5%;
-}
+} */
 
 section {
     display: flex;
@@ -19,17 +19,18 @@ section {
     margin-top: 50px;
     width: 450px;
     height: 600px;
-    background-color: crimson;
+    background-color: #fff;
     border-radius: 30px;
-    box-shadow: 0px 0px 25px #ef93ff;
+    box-shadow: 0px 0px 25px #354fd0;
 }
 
 .card img {
-    margin-top: 40px;
-    box-shadow: 0px 0px 10px goldenrod;
+    margin-top: 5px;
+    box-shadow: 0px 0px 10px rgb(53, 208, 18);
     width: 60%;
     border-radius: 50%;
     object-fit: scale-down;
+    justify-items: center;
 }
 
 .card p {
@@ -38,20 +39,21 @@ section {
 
 .card p:nth-child(3) {
     color: grey;
-    margin-top: -60px;
+    margin-top:80px;
     font-size: 20px;
 }
 .card p:nth-child(2) {
-    margin-top: 20px;
+    margin-top: 60px;
     font-weight: 600;
     font-size: 30px;
     color: #e02fff;
 }
-.card #boton {
+
+#botton {
     color: #ffffff;
     font-size: 30px;
     width: 100%;
-    background-color: #e02fff;
+    background-color: blue;
     text-align: center;
     padding-top: 40px;
 }
