@@ -1,0 +1,10 @@
+html {
+    font-size: 62,5%;
+}
+
+.tarjeta {
+    width: 200px;
+    height: 500px;
+    background-color: crimson;
+    border-radius: 20%;
+}
