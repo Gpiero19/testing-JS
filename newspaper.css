@@ -1,7 +1,7 @@
 body {
     background-color: aquamarine;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: chocolate;
+    color: #d2691e;
     margin: 0;
     /* padding: 20px; */
 }
@@ -98,3 +98,15 @@ div ~ p {
     color: white;
 }
 
+.image{
+    display: flex;
+    align-items: flex-end;
+}
+.responsive-img {
+    img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin: 1%;
+    padding: 10px;
+}}
