@@ -25,12 +25,12 @@ section {
 }
 
 .card img {
-    margin-top: 5px;
     box-shadow: 0px 0px 10px rgb(53, 208, 18);
-    width: 60%;
+    width: 70%;
     border-radius: 50%;
     object-fit: scale-down;
     justify-items: center;
+    margin-top: 70px;
 }
 
 .card p {
@@ -39,10 +39,9 @@ section {
 
 .card p:nth-child(3) {
     color: grey;
-    margin-top:80px;
     font-size: 20px;
 }
-.card p:nth-child(2) {
+.card .name {
     margin-top: 60px;
     font-weight: 600;
     font-size: 30px;
@@ -56,4 +55,5 @@ section {
     background-color: blue;
     text-align: center;
     padding-top: 40px;
+    padding-bottom: 10px;
 }
