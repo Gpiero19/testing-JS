@@ -59,6 +59,7 @@
         .form {
             display: flex;
             flex-direction: column;
+            justify-items: center;
         }
         .label {
             font-size: var(--sm);
@@ -73,6 +74,15 @@
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
+        }
+        .forgot-password {
+            font-size: var(--sm);
+            margin-bottom: 52px;
+            text-align: center;
+        }
+        .forgot-password a {
+            font-size: var(--hospital-green);
+            text-decoration: none;
         }
         .primary-button {
             background-color: var(--hospital-green);
@@ -90,6 +100,25 @@
             margin-bottom: 30px;
         }
 
+        .secondary-button {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px;
+            border-color: 0 0 0 0 var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            padding: 6px 1px 1px 6px;
+    
+        }
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
         @media (max-width: 640px) {
             .logo {
                 display: block;
@@ -100,29 +129,30 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo"
-            class="logo">
-
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
             <form action="/" class="form">
+                <label for="emailAdress"
+                        class="label">Email Adress</label>
+                <input type="email-adress"
+                        id="email-adress"
+                        placeholder="*******@*****.com"
+                        class="input email-adress">
                 <label for="password"
                         class="label">Password</label>
                 <input type="password"
                         id="password"
                         placeholder="********"
                         class="input input-password">
-                <label for="new-password"
-                        class="label">Password</label>
-                <input type="password"
-                        id="new-password"
-                        placeholder="********"
-                        class="input input-password">
-
                 <input type="submit" 
-                        value="confirm"
+                        value="Log in"
                         class="primary-button login-button">
+                <p>
+                <span class="forgot-password"><a href="/">Forgot my password</a></span>
+                </p>
+                <input type="submit"   
+                        value="Sign up" 
+                        class="secondary-button sign-button">
             </form>
         </div>
     </div>
